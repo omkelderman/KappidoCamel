@@ -1,0 +1,429 @@
+{
+  "follows": [
+    {
+      "created_at": "2015-10-04T20:17:34Z",
+      "_links": {
+        "self": "https://api.twitch.tv/kraken/users/xikeon/follows/channels/mrsgammlerin"
+      },
+      "notifications": false,
+      "channel": {
+        "_links": {
+          "self": "http://api.twitch.tv/kraken/channels/mrsgammlerin",
+          "follows": "http://api.twitch.tv/kraken/channels/mrsgammlerin/follows",
+          "commercial": "http://api.twitch.tv/kraken/channels/mrsgammlerin/commercial",
+          "stream_key": "http://api.twitch.tv/kraken/channels/mrsgammlerin/stream_key",
+          "chat": "http://api.twitch.tv/kraken/chat/mrsgammlerin",
+          "features": "http://api.twitch.tv/kraken/channels/mrsgammlerin/features",
+          "subscriptions": "http://api.twitch.tv/kraken/channels/mrsgammlerin/subscriptions",
+          "editors": "http://api.twitch.tv/kraken/channels/mrsgammlerin/editors",
+          "videos": "http://api.twitch.tv/kraken/channels/mrsgammlerin/videos",
+          "teams": "http://api.twitch.tv/kraken/channels/mrsgammlerin/teams"
+        },
+        "background": null,
+        "banner": null,
+        "broadcaster_language": "de",
+        "display_name": "MrsGammlerin",
+        "game": "Osu!",
+        "logo": "http://static-cdn.jtvnw.net/jtv_user_pictures/mrsgammlerin-profile_image-ced6220e72a5ece9-300x300.jpeg",
+        "mature": false,
+        "status": "[GER/ENG] Chill and play some gamez",
+        "partner": false,
+        "url": "http://www.twitch.tv/mrsgammlerin",
+        "video_banner": null,
+        "_id": 49588999,
+        "name": "mrsgammlerin",
+        "created_at": "2013-09-29T11:02:16Z",
+        "updated_at": "2015-10-05T22:15:19Z",
+        "delay": null,
+        "followers": 39,
+        "profile_banner": null,
+        "profile_banner_background_color": "#000000",
+        "views": 157,
+        "language": "de"
+      }
+    },
+    {
+      "created_at": "2015-09-13T20:26:31Z",
+      "_links": {
+        "self": "https://api.twitch.tv/kraken/users/xikeon/follows/channels/lirik"
+      },
+      "notifications": false,
+      "channel": {
+        "_links": {
+          "self": "https://api.twitch.tv/kraken/channels/lirik",
+          "follows": "https://api.twitch.tv/kraken/channels/lirik/follows",
+          "commercial": "https://api.twitch.tv/kraken/channels/lirik/commercial",
+          "stream_key": "https://api.twitch.tv/kraken/channels/lirik/stream_key",
+          "chat": "https://api.twitch.tv/kraken/chat/lirik",
+          "features": "https://api.twitch.tv/kraken/channels/lirik/features",
+          "subscriptions": "https://api.twitch.tv/kraken/channels/lirik/subscriptions",
+          "editors": "https://api.twitch.tv/kraken/channels/lirik/editors",
+          "videos": "https://api.twitch.tv/kraken/channels/lirik/videos",
+          "teams": "https://api.twitch.tv/kraken/channels/lirik/teams"
+        },
+        "background": null,
+        "banner": null,
+        "broadcaster_language": "en",
+        "display_name": "LIRIK",
+        "game": "Quiplash",
+        "logo": "http://static-cdn.jtvnw.net/jtv_user_pictures/lirik-profile_image-c0c34ecdea3ec322-300x300.jpeg",
+        "mature": true,
+        "status": "TUESDAY = DAY OFF Next Stream: Wednesday @ NOON EST / 5pm GMT ",
+        "partner": true,
+        "url": "http://www.twitch.tv/lirik",
+        "video_banner": "http://static-cdn.jtvnw.net/jtv_user_pictures/lirik-channel_offline_image-352c6f90d89f741b-640x360.jpeg",
+        "_id": 23161357,
+        "name": "lirik",
+        "created_at": "2011-06-27T18:34:45Z",
+        "updated_at": "2015-10-06T14:15:45Z",
+        "delay": 0,
+        "followers": 1129096,
+        "profile_banner": "http://static-cdn.jtvnw.net/jtv_user_pictures/lirik-profile_banner-fcf7d67c16ed4190-480.png",
+        "profile_banner_background_color": "#221f1f",
+        "views": 93515802,
+        "language": "en"
+      }
+    },
+    {
+      "created_at": "2015-09-08T19:44:55Z",
+      "_links": {
+        "self": "https://api.twitch.tv/kraken/users/xikeon/follows/channels/sisirara"
+      },
+      "notifications": false,
+      "channel": {
+        "_links": {
+          "self": "http://api.twitch.tv/kraken/channels/sisirara",
+          "follows": "http://api.twitch.tv/kraken/channels/sisirara/follows",
+          "commercial": "http://api.twitch.tv/kraken/channels/sisirara/commercial",
+          "stream_key": "http://api.twitch.tv/kraken/channels/sisirara/stream_key",
+          "chat": "http://api.twitch.tv/kraken/chat/sisirara",
+          "features": "http://api.twitch.tv/kraken/channels/sisirara/features",
+          "subscriptions": "http://api.twitch.tv/kraken/channels/sisirara/subscriptions",
+          "editors": "http://api.twitch.tv/kraken/channels/sisirara/editors",
+          "videos": "http://api.twitch.tv/kraken/channels/sisirara/videos",
+          "teams": "http://api.twitch.tv/kraken/channels/sisirara/teams"
+        },
+        "background": null,
+        "banner": null,
+        "broadcaster_language": "en",
+        "display_name": "Sisirara",
+        "game": "Osu!",
+        "logo": "http://static-cdn.jtvnw.net/jtv_user_pictures/sisirara-profile_image-f63eee80eebe0960-300x300.jpeg",
+        "mature": true,
+        "status": "\\o/ /o\\",
+        "partner": false,
+        "url": "http://www.twitch.tv/sisirara",
+        "video_banner": "http://static-cdn.jtvnw.net/jtv_user_pictures/sisirara-channel_offline_image-f21fadbf9043040c-640x360.jpeg",
+        "_id": 40545047,
+        "name": "sisirara",
+        "created_at": "2013-02-20T23:37:03Z",
+        "updated_at": "2015-09-19T22:16:36Z",
+        "delay": null,
+        "followers": 497,
+        "profile_banner": "http://static-cdn.jtvnw.net/jtv_user_pictures/sisirara-profile_banner-91f4a3d7ec37ce90-480.png",
+        "profile_banner_background_color": "#0f0f0f",
+        "views": 23836,
+        "language": "en"
+      }
+    },
+    {
+      "created_at": "2015-09-06T09:40:22Z",
+      "_links": {
+        "self": "https://api.twitch.tv/kraken/users/xikeon/follows/channels/naomiiii_"
+      },
+      "notifications": false,
+      "channel": {
+        "_links": {
+          "self": "http://api.twitch.tv/kraken/channels/naomiiii_",
+          "follows": "http://api.twitch.tv/kraken/channels/naomiiii_/follows",
+          "commercial": "http://api.twitch.tv/kraken/channels/naomiiii_/commercial",
+          "stream_key": "http://api.twitch.tv/kraken/channels/naomiiii_/stream_key",
+          "chat": "http://api.twitch.tv/kraken/chat/naomiiii_",
+          "features": "http://api.twitch.tv/kraken/channels/naomiiii_/features",
+          "subscriptions": "http://api.twitch.tv/kraken/channels/naomiiii_/subscriptions",
+          "editors": "http://api.twitch.tv/kraken/channels/naomiiii_/editors",
+          "videos": "http://api.twitch.tv/kraken/channels/naomiiii_/videos",
+          "teams": "http://api.twitch.tv/kraken/channels/naomiiii_/teams"
+        },
+        "background": null,
+        "banner": null,
+        "broadcaster_language": "en",
+        "display_name": "naomiiii_",
+        "game": "Osu!",
+        "logo": "http://static-cdn.jtvnw.net/jtv_user_pictures/naomiiii_-profile_image-2b8533f48a81c310-300x300.jpeg",
+        "mature": false,
+        "status": "Hello",
+        "partner": false,
+        "url": "http://www.twitch.tv/naomiiii_",
+        "video_banner": "http://static-cdn.jtvnw.net/jtv_user_pictures/naomiiii_-channel_offline_image-3a1293322d4376e3-640x360.jpeg",
+        "_id": 46215251,
+        "name": "naomiiii_",
+        "created_at": "2013-07-17T08:54:29Z",
+        "updated_at": "2015-10-05T13:16:40Z",
+        "delay": null,
+        "followers": 39,
+        "profile_banner": "http://static-cdn.jtvnw.net/jtv_user_pictures/naomiiii_-profile_banner-ddb56c6a36cd6a8f-480.jpeg",
+        "profile_banner_background_color": null,
+        "views": 214,
+        "language": "en"
+      }
+    },
+    {
+      "created_at": "2015-08-29T21:14:44Z",
+      "_links": {
+        "self": "https://api.twitch.tv/kraken/users/xikeon/follows/channels/dumtard"
+      },
+      "notifications": false,
+      "channel": {
+        "_links": {
+          "self": "http://api.twitch.tv/kraken/channels/dumtard",
+          "follows": "http://api.twitch.tv/kraken/channels/dumtard/follows",
+          "commercial": "http://api.twitch.tv/kraken/channels/dumtard/commercial",
+          "stream_key": "http://api.twitch.tv/kraken/channels/dumtard/stream_key",
+          "chat": "http://api.twitch.tv/kraken/chat/dumtard",
+          "features": "http://api.twitch.tv/kraken/channels/dumtard/features",
+          "subscriptions": "http://api.twitch.tv/kraken/channels/dumtard/subscriptions",
+          "editors": "http://api.twitch.tv/kraken/channels/dumtard/editors",
+          "videos": "http://api.twitch.tv/kraken/channels/dumtard/videos",
+          "teams": "http://api.twitch.tv/kraken/channels/dumtard/teams"
+        },
+        "background": null,
+        "banner": null,
+        "broadcaster_language": "en",
+        "display_name": "Dumtard",
+        "game": "Game Development",
+        "logo": null,
+        "mature": false,
+        "status": "Play game as I code it - HTML 5",
+        "partner": false,
+        "url": "http://www.twitch.tv/dumtard",
+        "video_banner": null,
+        "_id": 26019547,
+        "name": "dumtard",
+        "created_at": "2011-11-09T03:50:46Z",
+        "updated_at": "2015-10-04T20:15:53Z",
+        "delay": null,
+        "followers": 117,
+        "profile_banner": null,
+        "profile_banner_background_color": null,
+        "views": 1067,
+        "language": "en"
+      }
+    },
+    {
+      "created_at": "2015-08-27T15:12:58Z",
+      "_links": {
+        "self": "https://api.twitch.tv/kraken/users/xikeon/follows/channels/rockerboo"
+      },
+      "notifications": true,
+      "channel": {
+        "_links": {
+          "self": "http://api.twitch.tv/kraken/channels/rockerboo",
+          "follows": "http://api.twitch.tv/kraken/channels/rockerboo/follows",
+          "commercial": "http://api.twitch.tv/kraken/channels/rockerboo/commercial",
+          "stream_key": "http://api.twitch.tv/kraken/channels/rockerboo/stream_key",
+          "chat": "http://api.twitch.tv/kraken/chat/rockerboo",
+          "features": "http://api.twitch.tv/kraken/channels/rockerboo/features",
+          "subscriptions": "http://api.twitch.tv/kraken/channels/rockerboo/subscriptions",
+          "editors": "http://api.twitch.tv/kraken/channels/rockerboo/editors",
+          "videos": "http://api.twitch.tv/kraken/channels/rockerboo/videos",
+          "teams": "http://api.twitch.tv/kraken/channels/rockerboo/teams"
+        },
+        "background": null,
+        "banner": null,
+        "broadcaster_language": "en",
+        "display_name": "rockerBOO",
+        "game": "Programming",
+        "logo": "http://static-cdn.jtvnw.net/jtv_user_pictures/rockerboo-profile_image-c9bfa7a67b6c23d0-300x300.png",
+        "mature": false,
+        "status": "Learning Follower Based Recommendations with Mahout",
+        "partner": false,
+        "url": "http://www.twitch.tv/rockerboo",
+        "video_banner": "http://static-cdn.jtvnw.net/jtv_user_pictures/rockerboo-channel_offline_image-fc145553d2825532-640x360.png",
+        "_id": 73449556,
+        "name": "rockerboo",
+        "created_at": "2014-10-20T20:30:05Z",
+        "updated_at": "2015-10-03T10:15:16Z",
+        "delay": null,
+        "followers": 217,
+        "profile_banner": "http://static-cdn.jtvnw.net/jtv_user_pictures/rockerboo-profile_banner-ad37c77b6e8a45c5-480.jpeg",
+        "profile_banner_background_color": null,
+        "views": 10957,
+        "language": "en"
+      }
+    },
+    {
+      "created_at": "2015-08-18T19:43:17Z",
+      "_links": {
+        "self": "https://api.twitch.tv/kraken/users/xikeon/follows/channels/arkpit"
+      },
+      "notifications": false,
+      "channel": {
+        "_links": {
+          "self": "https://api.twitch.tv/kraken/channels/arkpit",
+          "follows": "https://api.twitch.tv/kraken/channels/arkpit/follows",
+          "commercial": "https://api.twitch.tv/kraken/channels/arkpit/commercial",
+          "stream_key": "https://api.twitch.tv/kraken/channels/arkpit/stream_key",
+          "chat": "https://api.twitch.tv/kraken/chat/arkpit",
+          "features": "https://api.twitch.tv/kraken/channels/arkpit/features",
+          "subscriptions": "https://api.twitch.tv/kraken/channels/arkpit/subscriptions",
+          "editors": "https://api.twitch.tv/kraken/channels/arkpit/editors",
+          "videos": "https://api.twitch.tv/kraken/channels/arkpit/videos",
+          "teams": "https://api.twitch.tv/kraken/channels/arkpit/teams"
+        },
+        "background": null,
+        "banner": null,
+        "broadcaster_language": "en",
+        "display_name": "Arkpit",
+        "game": "StarCraft II",
+        "logo": "http://static-cdn.jtvnw.net/jtv_user_pictures/arkpit-profile_image-2b61dbef481832e1-300x300.jpeg",
+        "mature": true,
+        "status": "The story continues!",
+        "partner": false,
+        "url": "http://www.twitch.tv/arkpit",
+        "video_banner": "http://static-cdn.jtvnw.net/jtv_user_pictures/arkpit-channel_offline_image-1e3c1f400d4c56f8-640x360.jpeg",
+        "_id": 42495447,
+        "name": "arkpit",
+        "created_at": "2013-04-15T12:06:29Z",
+        "updated_at": "2015-10-06T14:29:19Z",
+        "delay": null,
+        "followers": 11344,
+        "profile_banner": "http://static-cdn.jtvnw.net/jtv_user_pictures/arkpit-profile_banner-febad343398c0923-480.png",
+        "profile_banner_background_color": "#000000",
+        "views": 333742,
+        "language": "en"
+      }
+    },
+    {
+      "created_at": "2015-08-09T20:42:17Z",
+      "_links": {
+        "self": "https://api.twitch.tv/kraken/users/xikeon/follows/channels/simuleios"
+      },
+      "notifications": false,
+      "channel": {
+        "_links": {
+          "self": "http://api.twitch.tv/kraken/channels/simuleios",
+          "follows": "http://api.twitch.tv/kraken/channels/simuleios/follows",
+          "commercial": "http://api.twitch.tv/kraken/channels/simuleios/commercial",
+          "stream_key": "http://api.twitch.tv/kraken/channels/simuleios/stream_key",
+          "chat": "http://api.twitch.tv/kraken/chat/simuleios",
+          "features": "http://api.twitch.tv/kraken/channels/simuleios/features",
+          "subscriptions": "http://api.twitch.tv/kraken/channels/simuleios/subscriptions",
+          "editors": "http://api.twitch.tv/kraken/channels/simuleios/editors",
+          "videos": "http://api.twitch.tv/kraken/channels/simuleios/videos",
+          "teams": "http://api.twitch.tv/kraken/channels/simuleios/teams"
+        },
+        "background": null,
+        "banner": null,
+        "broadcaster_language": "en",
+        "display_name": "simuleios",
+        "game": "Programming",
+        "logo": "http://static-cdn.jtvnw.net/jtv_user_pictures/simuleios-profile_image-67a32d085904e551-300x300.png",
+        "mature": false,
+        "status": "Still gone for a bit! Check timer in description!",
+        "partner": false,
+        "url": "http://www.twitch.tv/simuleios",
+        "video_banner": "http://static-cdn.jtvnw.net/jtv_user_pictures/simuleios-channel_offline_image-842c957021e5ec74-640x360.png",
+        "_id": 94694674,
+        "name": "simuleios",
+        "created_at": "2015-06-28T10:05:01Z",
+        "updated_at": "2015-10-02T23:17:29Z",
+        "delay": null,
+        "followers": 129,
+        "profile_banner": null,
+        "profile_banner_background_color": "#000000",
+        "views": 917,
+        "language": "en"
+      }
+    },
+    {
+      "created_at": "2015-07-28T08:41:26Z",
+      "_links": {
+        "self": "https://api.twitch.tv/kraken/users/xikeon/follows/channels/sarachopsticks"
+      },
+      "notifications": true,
+      "channel": {
+        "_links": {
+          "self": "https://api.twitch.tv/kraken/channels/sarachopsticks",
+          "follows": "https://api.twitch.tv/kraken/channels/sarachopsticks/follows",
+          "commercial": "https://api.twitch.tv/kraken/channels/sarachopsticks/commercial",
+          "stream_key": "https://api.twitch.tv/kraken/channels/sarachopsticks/stream_key",
+          "chat": "https://api.twitch.tv/kraken/chat/sarachopsticks",
+          "features": "https://api.twitch.tv/kraken/channels/sarachopsticks/features",
+          "subscriptions": "https://api.twitch.tv/kraken/channels/sarachopsticks/subscriptions",
+          "editors": "https://api.twitch.tv/kraken/channels/sarachopsticks/editors",
+          "videos": "https://api.twitch.tv/kraken/channels/sarachopsticks/videos",
+          "teams": "https://api.twitch.tv/kraken/channels/sarachopsticks/teams"
+        },
+        "background": null,
+        "banner": null,
+        "broadcaster_language": "en",
+        "display_name": "SaraChopsticks",
+        "game": "League of Legends",
+        "logo": "http://static-cdn.jtvnw.net/jtv_user_pictures/sarachopsticks-profile_image-17af0856ce01fcd6-300x300.jpeg",
+        "mature": false,
+        "status": "\u265aSara\u265a They're called gummy worms (\u25cd\u2022\u1d17\u2022\u25cd)\u2764 ",
+        "partner": false,
+        "url": "http://www.twitch.tv/sarachopsticks",
+        "video_banner": "http://static-cdn.jtvnw.net/jtv_user_pictures/sarachopsticks-channel_offline_image-7c57773cf20944bb-640x360.png",
+        "_id": 29083602,
+        "name": "sarachopsticks",
+        "created_at": "2012-03-17T21:00:35Z",
+        "updated_at": "2015-10-06T10:15:57Z",
+        "delay": null,
+        "followers": 1522,
+        "profile_banner": "http://static-cdn.jtvnw.net/jtv_user_pictures/sarachopsticks-profile_banner-c67e2c8ebe1be03a-480.jpeg",
+        "profile_banner_background_color": null,
+        "views": 8957,
+        "language": "en"
+      }
+    },
+    {
+      "created_at": "2015-07-27T23:07:09Z",
+      "_links": {
+        "self": "https://api.twitch.tv/kraken/users/xikeon/follows/channels/kano"
+      },
+      "notifications": true,
+      "channel": {
+        "_links": {
+          "self": "http://api.twitch.tv/kraken/channels/kano",
+          "follows": "http://api.twitch.tv/kraken/channels/kano/follows",
+          "commercial": "http://api.twitch.tv/kraken/channels/kano/commercial",
+          "stream_key": "http://api.twitch.tv/kraken/channels/kano/stream_key",
+          "chat": "http://api.twitch.tv/kraken/chat/kano",
+          "features": "http://api.twitch.tv/kraken/channels/kano/features",
+          "subscriptions": "http://api.twitch.tv/kraken/channels/kano/subscriptions",
+          "editors": "http://api.twitch.tv/kraken/channels/kano/editors",
+          "videos": "http://api.twitch.tv/kraken/channels/kano/videos",
+          "teams": "http://api.twitch.tv/kraken/channels/kano/teams"
+        },
+        "background": null,
+        "banner": null,
+        "broadcaster_language": "en",
+        "display_name": "Kano",
+        "game": "Osu!",
+        "logo": "http://static-cdn.jtvnw.net/jtv_user_pictures/kano-profile_image-5b361d9c0944aff0-300x300.jpeg",
+        "mature": true,
+        "status": "[~#740] Training~ Maybe Requests?",
+        "partner": false,
+        "url": "http://www.twitch.tv/kano",
+        "video_banner": "http://static-cdn.jtvnw.net/jtv_user_pictures/kano-channel_offline_image-84624b1a27f13378-640x360.png",
+        "_id": 29370499,
+        "name": "kano",
+        "created_at": "2012-03-30T06:45:23Z",
+        "updated_at": "2015-10-06T14:16:05Z",
+        "delay": null,
+        "followers": 11176,
+        "profile_banner": null,
+        "profile_banner_background_color": null,
+        "views": 213171,
+        "language": "en"
+      }
+    }
+  ],
+  "_total": 10,
+  "_links": {
+    "self": "https://api.twitch.tv/kraken/users/xikeon/follows/channels?direction=DESC&limit=100&offset=0&sortby=created_at",
+    "next": "https://api.twitch.tv/kraken/users/xikeon/follows/channels?direction=DESC&limit=100&offset=100&sortby=created_at"
+  }
+}

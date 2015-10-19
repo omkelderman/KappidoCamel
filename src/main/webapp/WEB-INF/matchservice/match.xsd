@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified"
+           targetNamespace="http://www.han.nl/schemas/messages"
+           xmlns:han="http://www.han.nl/schemas/messages">
+
+
+    <complexType name="MatchResult">
+        <sequence>
+            <element name="matchedUsers" type="han:MatchEntry" minOccurs="0" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="MatchEntry">
+        <all>
+            <element name="userId" type="int" minOccurs="1" maxOccurs="1"/>
+            <element name="probability" type="double" minOccurs="1" maxOccurs="1"/>
+        </all>
+    </complexType>
+
+    <complexType name="MatchInput">
+        <sequence>
+            <element name="userId" type="int" minOccurs="1" maxOccurs="1"/>
+            <element name="paramList" type="han:MatchParameter" minOccurs="1" maxOccurs="6"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="MatchParameter">
+        <all>
+            <element name="weighing" type="int" minOccurs="1" maxOccurs="1"/>
+            <element name="matchType" type="han:MatchType" minOccurs="1" maxOccurs="1"/>
+        </all>
+    </complexType>
+
+    <simpleType name="MatchType">
+        <restriction base="NCName">
+            <enumeration value="gamesWatched"/>
+            <!--
+                <enumeration value="genresWatched"/>
+                We wanted to do a matching algorithm based on which genres of games are watched on Twitch. The API
+                doesn't allow for this though :(.
+            -->
+            <enumeration value="gamesStreamed"/>
+            <enumeration value="mutualFollowings"/>
+            <enumeration value="gamesPlayed"/>
+            <enumeration value="genresPlayed"/>
+        </restriction>
+    </simpleType>
+
+    <element name="MatchRequest">
+        <complexType>
+            <sequence>
+                <element name="input" type="han:MatchInput" minOccurs="1" maxOccurs="1"/>
+            </sequence>
+        </complexType>
+    </element>
+
+    <element name="MatchResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="han:MatchResult" minOccurs="1" maxOccurs="1"/>
+            </sequence>
+        </complexType>
+    </element>
+</schema>

@@ -1,0 +1,35 @@
+[
+  {
+    "userId": 0,
+    "twitchId": "staiain"
+  },
+  {
+    "userId": 1,
+    "twitchId": "omkelderman",
+    "steamId": "76561198061876520"
+  },
+  {
+    "userId": 2,
+    "twitchId": "MineMaarten",
+    "steamId": "76561198034641265"
+  },
+  {
+    "userId": 3,
+    "twitchId": "quetzi",
+    "steamId": "76561198030627240"
+  },
+  {
+    "userId": 4,
+    "twitchId": "xikeon",
+    "steamId": "76561198042289401"
+  },
+  {
+    "userId": 5,
+    "twitchId": "happystick",
+    "steamId": "76561197992358589"
+  },
+  {
+    "userId": 6,
+    "twitchId": "justin"
+  }
+]
