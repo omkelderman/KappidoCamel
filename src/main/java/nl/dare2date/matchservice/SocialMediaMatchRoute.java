@@ -1,13 +1,16 @@
 package nl.dare2date.matchservice;
 
 import nl.dare2date.kappido.services.MatchResponse;
-import nl.dare2date.kappido.steam.SteamAPIWrapper;
-import nl.dare2date.kappido.twitch.TwitchAPIWrapper;
+import nl.dare2date.kappido.steam.SteamCamelAPIWrapper;
+import nl.dare2date.kappido.twitch.TwitchCamelAPIWrapper;
 import nl.dare2date.profile.FakeD2DProfileManager;
 import org.apache.camel.ExchangePattern;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.builder.xml.Namespaces;
 import org.apache.camel.converter.jaxb.JaxbDataFormat;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class SocialMediaMatchRoute extends RouteBuilder {
     public static final String HEADER_KAPPIDO_USER_ID = "KappidoUserId";
@@ -37,14 +40,18 @@ public class SocialMediaMatchRoute extends RouteBuilder {
 //        .end() // stop splitting and start returning
 //        .marshal(jaxbMatchResponse); // serialize the java-object from the aggregrator to SOAP/XML
 
+        TwitchCamelAPIWrapper twitch = new TwitchCamelAPIWrapper(this);
+        SteamCamelAPIWrapper steam = new SteamCamelAPIWrapper(this);
 
-        from("spring-ws:rootqname:{http://www.han.nl/schemas/messages}MatchRequest?endpointMapping=#matchEndpointMapping")
-            .setExchangePattern(ExchangePattern.InOut)
-            .setHeader(HEADER_KAPPIDO_USER_ID, ns.xpath("/mes:MatchRequest/mes:input/mes:userId/text()", String.class))
-            .split(ns.xpath("/mes:MatchRequest/mes:input/mes:paramList"), new KappidoAggregrate(new FakeD2DProfileManager(), new TwitchAPIWrapper(), new SteamAPIWrapper()))
-                .parallelProcessing()
-                .setHeader(HEADER_KAPPIDO_WEIGHTING, ns.xpath("/mes:paramList/mes:weighing/text()", String.class))
-                .setHeader(HEADER_KAPPIDO_MATCH_TYPE, ns.xpath("/mes:paramList/mes:matchType/text()", String.class))
+
+        if(!isJUnitTest()) {
+            from("spring-ws:rootqname:{http://www.han.nl/schemas/messages}MatchRequest?endpointMapping=#matchEndpointMapping")
+                    .setExchangePattern(ExchangePattern.InOut)
+                    .setHeader(HEADER_KAPPIDO_USER_ID, ns.xpath("/mes:MatchRequest/mes:input/mes:userId/text()", String.class))
+                    .split(ns.xpath("/mes:MatchRequest/mes:input/mes:paramList"), new KappidoAggregrate(new FakeD2DProfileManager(), twitch, steam))
+                    .parallelProcessing()
+                    .setHeader(HEADER_KAPPIDO_WEIGHTING, ns.xpath("/mes:paramList/mes:weighing/text()", String.class))
+                    .setHeader(HEADER_KAPPIDO_MATCH_TYPE, ns.xpath("/mes:paramList/mes:matchType/text()", String.class))
 //                .choice()
 //                    .when(header(HEADER_KAPPIDO_MATCH_TYPE).isEqualTo("gamesStreamed"))
 //                        .log("KAAS-gamesStreamed: ${body} | ${headers}")
@@ -53,6 +60,21 @@ public class SocialMediaMatchRoute extends RouteBuilder {
 //                    .otherwise()
 //                        .log("KAAS-otherwise: GA FIETSEN KUT: ${body}")
 //                .end()
-            .end();
+                    .end();
+        }
+
+        twitch.configure();
+        steam.configure();
+    }
+
+    public static boolean isJUnitTest() {
+        StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
+        List<StackTraceElement> list = Arrays.asList(stackTrace);
+        for (StackTraceElement element : list) {
+            if (element.getClassName().startsWith("org.junit.")) {
+                return true;
+            }
+        }
+        return false;
     }
 }

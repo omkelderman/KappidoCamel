@@ -1,5 +1,6 @@
 package nl.dare2date.kappido.twitch;
 
+import nl.dare2date.matchservice.SocialMediaMatchRoute;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.test.junit4.CamelTestSupport;
 import org.junit.Test;
@@ -32,6 +33,8 @@ public class TwitchCamelAPIWrapperTest extends CamelTestSupport {
 
     @Override
     protected RouteBuilder createRouteBuilder() throws Exception {
-        return twitchAPIWrapper = new TwitchCamelAPIWrapper();
+        SocialMediaMatchRoute socialMediaMatchRoute = new SocialMediaMatchRoute();
+        twitchAPIWrapper = new TwitchCamelAPIWrapper(socialMediaMatchRoute);
+        return socialMediaMatchRoute;
     }
 }

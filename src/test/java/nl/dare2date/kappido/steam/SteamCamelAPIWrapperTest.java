@@ -1,5 +1,6 @@
 package nl.dare2date.kappido.steam;
 
+import nl.dare2date.matchservice.SocialMediaMatchRoute;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.test.junit4.CamelTestSupport;
 import org.junit.Test;
@@ -32,6 +33,8 @@ public class SteamCamelAPIWrapperTest extends CamelTestSupport {
 
     @Override
     protected RouteBuilder createRouteBuilder() throws Exception {
-        return steamAPIWrapper = new SteamCamelAPIWrapper();//new SteamCamelAPIWrapper("steamapikey")
+        SocialMediaMatchRoute socialMediaMatchRoute = new SocialMediaMatchRoute();
+        steamAPIWrapper = new SteamCamelAPIWrapper(socialMediaMatchRoute);
+        return socialMediaMatchRoute;
     }
 }

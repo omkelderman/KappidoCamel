@@ -23,7 +23,7 @@ import java.util.List;
 /**
  * Created by Maarten on 20-Oct-15.
  */
-public class SteamCamelAPIWrapper extends RouteBuilder implements ISteamAPIWrapper{
+public class SteamCamelAPIWrapper /*extends RouteBuilder*/ implements ISteamAPIWrapper{
     private static final String CAMEL_ENDPOINT = "direct:steam";
     private static final String REQUEST_GAMES = "Games";
     private static final String REQUEST_GAME_DETAILS = "GameDetails";
@@ -31,21 +31,22 @@ public class SteamCamelAPIWrapper extends RouteBuilder implements ISteamAPIWrapp
     private static final String CAMEL_HEADER_REQUEST = "KappidoRequestType";
 
     private static final String STEAM_API_PATH = "SteamAPIKey.txt"; //Within the resources folder.
+    private final RouteBuilder routeBuilder;
     private IUserCache<ISteamUser> userCache;
     private final String getOwnedGamesPath;
     private final String GET_GAME_DETAILS = String.format("http://store.steampowered.com/api/appdetails/?appids=${header.%s}", CAMEL_HEADER_ID);
     private ProducerTemplate template;
 
-    @Override
+//    @Override
     public void configure() throws Exception {
-        from(CAMEL_ENDPOINT)
+        routeBuilder.from(CAMEL_ENDPOINT)
         .setExchangePattern(ExchangePattern.InOut)
         .log(String.format("Match type: ${header.%s}, user: ${header.%s}", CAMEL_HEADER_REQUEST, CAMEL_HEADER_ID))
         .choice()
-        .when(header(CAMEL_HEADER_REQUEST).contains(REQUEST_GAMES))
-        .setHeader(Exchange.HTTP_URI, simple(getOwnedGamesPath))
-        .when(header(CAMEL_HEADER_REQUEST).contains(REQUEST_GAME_DETAILS))
-        .setHeader(Exchange.HTTP_URI, simple(GET_GAME_DETAILS))
+        .when(routeBuilder.header(CAMEL_HEADER_REQUEST).contains(REQUEST_GAMES))
+        .setHeader(Exchange.HTTP_URI, routeBuilder.simple(getOwnedGamesPath))
+        .when(routeBuilder.header(CAMEL_HEADER_REQUEST).contains(REQUEST_GAME_DETAILS))
+        .setHeader(Exchange.HTTP_URI, routeBuilder.simple(GET_GAME_DETAILS))
         .end()
         .to("https://ThisIsOverridenBySetHeaderHTTPURI")
         .convertBodyTo(String.class);
@@ -56,12 +57,13 @@ public class SteamCamelAPIWrapper extends RouteBuilder implements ISteamAPIWrapp
      *
      * @param apiKey The steam-api-key to use
      */
-    public SteamCamelAPIWrapper(String apiKey) {
+    public SteamCamelAPIWrapper(RouteBuilder routeBuilder, String apiKey) {
         getOwnedGamesPath = String.format("http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=%s&steamid=${header.%s}", apiKey, CAMEL_HEADER_ID);
+        this.routeBuilder = routeBuilder;
     }
 
-    public SteamCamelAPIWrapper() {
-        this(getDefaultSteamAPIKey());
+    public SteamCamelAPIWrapper(RouteBuilder routeBuilder) {
+        this(routeBuilder, getDefaultSteamAPIKey());
     }
 
     private static String getDefaultSteamAPIKey() {
@@ -135,7 +137,7 @@ public class SteamCamelAPIWrapper extends RouteBuilder implements ISteamAPIWrapp
     }
 
     private JsonObject sendMessage(final String request, final String id) {
-        template = getContext().createProducerTemplate();
+        template = routeBuilder.getContext().createProducerTemplate();
         Exchange exchange = template.send(CAMEL_ENDPOINT, new Processor() {
             @Override
             public void process(Exchange exchange) throws Exception {

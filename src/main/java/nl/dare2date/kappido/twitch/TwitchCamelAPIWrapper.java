@@ -17,7 +17,7 @@ import java.util.List;
 /**
  * Created by Maarten on 20-Oct-15.
  */
-public class TwitchCamelAPIWrapper extends RouteBuilder implements ITwitchAPIWrapper{
+public class TwitchCamelAPIWrapper /*extends RouteBuilder*/ implements ITwitchAPIWrapper{
     private static final String CAMEL_ENDPOINT = "direct:twitch";
     private static final String REQUEST_USER = "User";
     private static final String REQUEST_FOLLOWED = "Following";
@@ -25,19 +25,24 @@ public class TwitchCamelAPIWrapper extends RouteBuilder implements ITwitchAPIWra
     private static final String CAMEL_HEADER_REQUEST = "KappidoRequestType";
     private static final String FOLLOWING_USERS_URL = String.format("https://api.twitch.tv/kraken/users/${header.%s}/follows/channels?direction=DESC&limit=100&offset=%s&sortby=created_at", CAMEL_HEADER_USER, 0);
     private static final String GET_CHANNEL_URL = String.format("https://api.twitch.tv/kraken/channels/${header.%s}",CAMEL_HEADER_USER);
+    private final RouteBuilder routeBuilder;
     private ProducerTemplate template;
     private IUserCache<ITwitchUser> userCache;
 
-    @Override
+    public TwitchCamelAPIWrapper(RouteBuilder routeBuilder) {
+        this.routeBuilder = routeBuilder;
+    }
+
+    //    @Override
     public void configure() throws Exception {
-        from(CAMEL_ENDPOINT)
+        routeBuilder.from(CAMEL_ENDPOINT)
         .setExchangePattern(ExchangePattern.InOut)
         .log(String.format("Match type: ${header.%s}, user: ${header.%s}", CAMEL_HEADER_REQUEST, CAMEL_HEADER_USER))
         .choice()
-        .when(header(CAMEL_HEADER_REQUEST).contains(REQUEST_USER))
-        .setHeader(Exchange.HTTP_URI, simple(GET_CHANNEL_URL))
-        .when(header(CAMEL_HEADER_REQUEST).contains(REQUEST_FOLLOWED))
-        .setHeader(Exchange.HTTP_URI, simple(FOLLOWING_USERS_URL))
+        .when(routeBuilder.header(CAMEL_HEADER_REQUEST).contains(REQUEST_USER))
+        .setHeader(Exchange.HTTP_URI, routeBuilder.simple(GET_CHANNEL_URL))
+        .when(routeBuilder.header(CAMEL_HEADER_REQUEST).contains(REQUEST_FOLLOWED))
+        .setHeader(Exchange.HTTP_URI, routeBuilder.simple(FOLLOWING_USERS_URL))
         .end()
         .to("https://ThisIsOverridenBySetHeaderHTTPURI")
         .convertBodyTo(String.class);
@@ -73,7 +78,7 @@ public class TwitchCamelAPIWrapper extends RouteBuilder implements ITwitchAPIWra
     }
 
     private JsonObject sendMessage(final String request, final String twitchId) {
-        template = getContext().createProducerTemplate();
+        template = routeBuilder.getContext().createProducerTemplate();
         Exchange exchange = template.send(CAMEL_ENDPOINT, new Processor() {
             @Override
             public void process(Exchange exchange) throws Exception {
