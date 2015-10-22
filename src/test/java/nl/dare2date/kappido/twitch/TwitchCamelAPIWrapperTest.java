@@ -13,11 +13,6 @@ public class TwitchCamelAPIWrapperTest extends CamelTestSupport {
 
     private TwitchCamelAPIWrapper twitchAPIWrapper;
 
-   // @Before
-   // public void initialize() {
-   //     twitchAPIWrapper = new TwitchCamelAPIWrapper();
-   // }
-
     @Test
     public void checkUserRetrieval() throws Exception {
         ITwitchUser user = twitchAPIWrapper.getUser("staiain");
